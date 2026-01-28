@@ -37,7 +37,7 @@ const Testimonials = () => {
             </div>
 
             {/* Second testimonial text below stars */}
-            <div className="text-center">
+            <div className="sm:px-0 px-12 text-center">
               <p className=" text-white text-base mb-2 font-['Roboto']">
                 Expert Payment transformed the way we handle transactions. Secure, fast, and reliable – exactly what our business needed!
               </p>

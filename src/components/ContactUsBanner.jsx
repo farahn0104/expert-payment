@@ -38,7 +38,7 @@ const ContactUsBanner = () => {
           }}></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="max-w-7xl mx-auto px-10 sm:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
             <div className='text-start'>
               <h3 className="text-white text-sm md:text-base font-semibold uppercase tracking-wide font-['Lato'] mb-4">
