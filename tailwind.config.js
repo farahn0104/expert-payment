@@ -1,0 +1,76 @@
+// tailwind.config.js (Complete)
+export default {
+  content: [
+    './index.html',
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        'lato': ['Lato', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+      },
+      colors: {
+        primary: '#00CFB4',
+        secondary: '#000000',
+        text: '#2F2F2F',
+        accent: '#FFFFFF',
+        'ccc3453': '#00346F',
+        'b5c7681': '#F03B3B00',
+        'a959e70': '#FFFFFF',
+        '05476f9': '#EEEEEE',
+        '876cdb1': '#F8F8F8',
+      },
+      fontSize: {
+        'xs': '0.75rem',
+        'sm': '0.875rem',
+        'base': '1rem',
+        'lg': '1.125rem',
+        'xl': '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '3.75rem',
+        '7xl': '4.5rem',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '26': '6.5rem',
+        '30': '7.5rem',
+        '34': '8.5rem',
+        '38': '9.5rem',
+        '42': '10.5rem',
+        '46': '11.5rem',
+        '50': '12.5rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.5s ease-out',
+        'slide-left': 'slideLeft 0.5s ease-out',
+        'slide-right': 'slideRight 0.5s ease-out',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s infinite',
+      },
+      boxShadow: {
+        'elementor': '0 10px 25px 0 rgba(0,0,0,0.1)',
+        'elementor-lg': '0 0 20px 0 rgba(0,0,0,0.1)',
+        'elementor-xl': '0 0 37px rgba(101,99,92,0.87)',
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(170deg, #00CFB4 0%, #00346F 100%)',
+        'gradient-overlay': 'linear-gradient(180deg, #00CFB4 0%, #00346F 100%)',
+      },
+      zIndex: {
+        '60': '60',
+        '70': '70',
+        '80': '80',
+        '90': '90',
+        '100': '100',
+      },
+    },
+  },
+  plugins: [],
+}
