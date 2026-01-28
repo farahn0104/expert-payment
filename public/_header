@@ -1,0 +1,27 @@
+/*.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000
+
+/*.jsx
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000
+
+/*.mjs
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000
+
+/*.html
+  Content-Type: text/html
+  Cache-Control: public, max-age=0
+
+/*.css
+  Content-Type: text/css
+  Cache-Control: public, max-age=31536000
+
+/*.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=31536000
+
+/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=31536000
