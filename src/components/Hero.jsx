@@ -127,16 +127,7 @@ const Hero = () => {
       </div>
 
       {/* CSS for smooth transitions */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        
-        .slide-fade-in {
-          animation: fadeIn 0.7s ease-in-out;
-        }
-      `}</style>
+      
     </section>
   );
 };

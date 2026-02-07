@@ -1,39 +1,40 @@
 // components/StatsSection.jsx
-import React from 'react';
+import React from "react";
 
 const StatsSection = () => {
-  const stats = [
-    { label: "Transactions Processed", value: "10M+", suffix: "+" },
-    { label: "Happy Customers", value: "50K", suffix: "+" },
-    { label: "Countries Supported", value: "150", suffix: "+" },
-    { label: "Uptime", value: "99.9", suffix: "%" }
-  ];
-
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-[#00CFB4] to-[#00346F] relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#00CFB4] to-[#00346F] py-12 sm:py-16 lg:py-24">
       
-      <div className="container mx-auto px-10 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           
-          {/* Left Column - Text Content */}
-          <div className="text-center lg:text-left">
-            <h3 className="text-[#00346F] text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wide font-['Lato'] mb-3 sm:mb-4">
+          {/* Left Content */}
+          <div className="text-center lg:text-left lg:max-w-xl">
+            <h3 className="text-[#00346F] text-xs sm:text-lg font-semibold uppercase tracking-wide font-['Lato'] mb-3">
               Seamless Connectivity
             </h3>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-['Lato'] leading-snug sm:leading-tight">
-              Your Pathway to Hassle-Free <br className="hidden sm:block" /> Payment Solutions
+
+            <h2 className="text-white  font-bold font-['Lato'] text-2xl sm:text-3xl md:text-[42px] leading-tight">
+              Your Pathway to Hassle-Free <br className="hidden sm:block" />
+              Payment Solutions
             </h2>
           </div>
 
-          {/* Right Column - Description */}
-          <div className="lg:text-left">
-            <div className="space-y-4 sm:space-y-6">
-              <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed font-['Roboto']">
+          {/* Right Content */}
+          <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+            <div className="space-y-5">
+              <p className="text-white text-sm sm:text-base leading-relaxed font-['Roboto']">
                 Transform your payment experience with cutting-edge solutions tailored for your business success. From secure online transactions to advanced POS systems, we provide seamless, efficient, and trustworthy payment services to help your business thrive in today's digital world.
               </p>
 

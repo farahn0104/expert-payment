@@ -30,18 +30,18 @@ const Features = () => {
   ];
 
   return (
-    <section className=" py-16 bg-[#F8F8F8]">
+    <section className="border pt-10 pb-4 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-4xl font-semibold text-[#2F2F2F] mb-4 font-['Lato']">
+        <div className="text-center mb-5">
+          <h2 className="text-xl md:text-5xl font-semibold text-[#2F2F2F] font-['Lato']">
             Why Choose Expert Payment?
           </h2>
         </div>
 
-        <div className="border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8">
           {features.map((feature, index) => (
-            <div key={index} className=" bg-white rounded-lg shadow-lg py-4 px-12 hover:shadow-xl transition-shadow duration-300">
-              <div className="pt-5 place-items-center text-5xl mb-6 text-center text-[#00CFB4]">
+            <a href='/' key={index} className="hover:shadow-xl bg-white shadow-md py-4 h-[320px]  transition-shadow duration-300">
+              <div className="pt-5 place-items-center text-5xl mb-2 text-center text-[#00CFB4]">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-center font-['Lato'] text-[#2F2F2F]">
@@ -50,7 +50,7 @@ const Features = () => {
               <p className="text-[#2F2F2F] text-center">
                 {feature.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

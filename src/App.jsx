@@ -1,51 +1,27 @@
-// App.jsx (Complete Updated Version)
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import ContentBoxes from './components/ContentBoxes';
-import Features from './components/Features';
-import StatsSection from './components/StatsSection';
-import Testimonials from './components/Testimonials';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-import ChatWidget from './components/ChatWidget';
-import ElementorSupport from './components/ElementorSupport';
-import LoadingScreen from './components/LoadingScreen';
-import StructuredData from './components/StructuredData';
-import Scripts from './components/Scripts';
-import Featured from './components/Featured';
-import ContactUs from './components/ContactUs';
-import ContactUsBanner from './components/ContactUsBanner';
-import Clients from './components/Clients';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Services from './pages/Services'
+import About from './pages/About'
+import CardMachines from './pages/CardMachines'
+import OnlinePayments from './pages/OnlinePayments'
+import Epos from './pages/Epos'
+import Funding from './pages/Funding'
 
-function App() {
+const App = () => {
   return (
-    <>
-      <LoadingScreen />
-      <StructuredData />
-
-      <div className="elementor elementor-18 min-h-screen">
-        <Header />
-        <Hero />
-        <Services />
-        <ContentBoxes />
-        <Features />
-        <StatsSection />
-        <Featured />
-        <ContactUs/>
-        <ContactUsBanner/>
-
-        <Testimonials />
-        <Clients/>
-        <Footer />
-      </div>
-
-      <ChatWidget />
-      <ElementorSupport />
-      <Scripts />
-    </>
-  );
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/card-machines' element={<CardMachines />} />
+        <Route path='/online-payments' element={<OnlinePayments />} />
+        <Route path='/epos' element={<Epos />} />
+        <Route path='/murchant-funding' element={<Funding />} />
+      </Routes>
+    </div>
+  )
 }
 
-export default App;
+export default App

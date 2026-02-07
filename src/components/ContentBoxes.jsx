@@ -78,20 +78,18 @@ const ContentBoxes = () => {
   ];
 
   return (
-    <section className="py-2">
+    <section className="py-4">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-xl md:text-2xl font-semibold text-[#2F2F2F] mb-4 font-['Lato']">
             Delivering the Best Payment Solutions for Your Business
           </h2>
-          <p className="text-[#2F2F2F] max-w-3xl mx-auto">
-            We offer a complete suite of payment processing tools designed to meet the needs of modern businesses.
-          </p>
+
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-11">
           {boxes.map((box) => (
-            <div key={box.id} className={`${box.bgColor} text-center  shadow-lg p-6 hover:shadow-xl transition-shadow duration-300`}>
+            <div key={box.id} className={`${box.bgColor} group text-center  shadow-lg p-6 hover:shadow-xl transition-shadow duration-300`}>
               <div className="text-4xl mb-4">
                 <img src={box.image} alt="" />
               </div>
@@ -101,7 +99,7 @@ const ContentBoxes = () => {
               <p className={`${box.textColor} opacity-90`}>
                 {box.description}
               </p>
-              <button className="mt-4 m-auto hover:bg-gradient-to-br from-[#00CFB4] to-[#00346F] bg-[#00CFB4] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-none border border-transparent font-['Lato'] font-semibold text-sm uppercase flex items-center justify-center gap-2 transition-all duration-300">
+              <button className="mt-4 m-auto group-hover:bg-gradient-to-br from-[#00CFB4] to-[#00346F] bg-[#00CFB4] text-white px-8 sm:px-8 py-3 sm:py-3 rounded-none border border-transparent font-['Lato'] font-semibold text-sm uppercase flex items-center justify-center gap-2 transition-all duration-300">
                 {box.button}
               </button>
             </div>

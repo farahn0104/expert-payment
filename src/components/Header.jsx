@@ -1,11 +1,24 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Breadcrumb from "./Breadcrumb";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { name: "Home", href: '/' },
+    { name: "About", href: '/about-us' },
+    { name: "Card Machines", href: '/card-machines' },
+    { name: "Online Payments", href: '/online-payments' },
+    { name: "EPOS", href: '/epos' },
+    { name: "Funding", href: '/murchant-funding' },
+    { name: "Services", href: '/services' },
+  ]
   return (
     <>
       {/* HEADER */}
+
+      
       <header className="bg-white shadow-sm py-2 relative z-50">
         <div className="max-w-7xl mx-auto px-3">
           <div className="flex justify-between items-center">
@@ -19,22 +32,14 @@ const Header = () => {
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex space-x-8">
-              {[
-                "Home",
-                "About Us",
-                "Card Machines",
-                "Online Payments",
-                "EPOS",
-                "Funding",
-                "Services",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href="/"
+              {navLinks.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.href}
                   className="text-lg font-bold text-[#2F2F2F] hover:text-[#00CFB4]"
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
             </nav>
 
@@ -74,23 +79,15 @@ const Header = () => {
 
           {/* Mobile Links */}
           <nav className="space-y-6">
-            {[
-              "Home",
-              "About Us",
-              "Card Machines",
-              "Online Payments",
-              "EPOS",
-              "Funding",
-              "Services",
-            ].map((item) => (
-              <a
-                key={item}
-                href="/"
+            {navLinks.map((item, index) => (
+              <Link
+                key={index}
+                to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="block text-lg font-semibold text-black"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
         </div>

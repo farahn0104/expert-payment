@@ -1,30 +1,35 @@
 // components/ContactUsBanner.jsx
 import { MessageCircle, Mail, PhoneCall } from 'lucide-react';
 import React from 'react';
+import { FiPhoneCall } from 'react-icons/fi';
+import { IoIosMailOpen } from 'react-icons/io';
+import { TiMessages } from 'react-icons/ti';
 
 const ContactUsBanner = () => {
   const cards = [
     {
-      id: 1,
-      title: "Client Support",
-      description: "Our dedicated team offers prompt assistance to ensure smooth payment operations and business continuity",
-      buttonText: "Chat Us →",
-      icon: <MessageCircle size={50} />
-    },
-    {
-      id: 2,
-      title: "Visit us",
-      description: "Raise tickets for swift resolutions to your queries and technical issues, with experts ready to assist you",
-      buttonText: "Location →",
-      icon: <Mail size={50} />
-    },
-    {
-      id: 3,
-      title: "Customer Service",
-      description: "Experience seamless customer support with personalized and great solutions for your payment needs",
-      buttonText: "Call Us →",
-      icon: <PhoneCall size={50} />
-    }
+        title: "Client Support",
+        description: "Our dedicated team offers prompt assistance to ensure smooth payment operations and business continuity.",
+        buttonText: "Chat Us",
+        buttonLink: "https://expertpayment.co.uk/contact-us/",
+        icon: <TiMessages size="25" className="text-[#13F9DB] h-10 w-10" />
+    ,
+      },
+      {
+        title: "Ticket Support",
+        description: "Raise tickets for swift resolutions to your queries and technical issues, with experts ready to assist you.",
+        buttonText: "Location ",
+        buttonLink: "https://expertpayment.co.uk/contact-us/",
+        icon: <IoIosMailOpen size="25" className="text-[#13F9DB] h-10 w-10" />,
+      },
+      {
+        title: "Customer Services",
+        description: "Experience seamless customer support with personalized solutions for your payment needs.",
+        buttonText: "Call Us",
+        buttonLink: "https://expertpayment.co.uk/contact-us/",
+        icon: <FiPhoneCall size="25" className="text-[#13F9DB] h-10 w-10" />
+    ,
+      },
   ];
 
   return (
@@ -41,16 +46,16 @@ const ContactUsBanner = () => {
         <div className="max-w-7xl mx-auto px-10 sm:px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-8">
             <div className='text-start'>
-              <h3 className="text-white text-sm md:text-base font-semibold uppercase tracking-wide font-['Lato'] mb-4">
-                CONTACT US
-              </h3>
+              <h3 className="text-[#00346F] text-xs sm:text-lg font-semibold uppercase tracking-wide font-['Lato'] mb-3">
+              Contact us
+            </h3>
               <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white font-['Lato'] leading-tight">
                 Need more help?
               </h2>
             </div>
             <div className='flex flex-col justify-center'>
               <div className='space-y-4'>
-                <p className="text-white text-base md:text-lg leading-relaxed font-['Roboto']">
+                <p className="text-white text-base md:text-md leading-relaxed font-['Roboto']">
                   We're just a message away! Connect with our support team for quick solutions and expert advice tailored to your payment needs.
                 </p>
                 <p className="text-white text-base md:text-lg leading-relaxed font-['Roboto']">
@@ -64,30 +69,32 @@ const ContactUsBanner = () => {
 
       {/* Cards Section - Positioned below the banner */}
       <div className="max-w-7xl mx-auto px-4 -mt-12 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="group bg-white rounded-lg p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="mb-6 lg:mb-8">
-                <div className='text-[#00CFB4] mb-4'>{card.icon}</div>
-                <h4 className="text-lg lg:text-xl font-bold text-gray-900 mb-3 lg:mb-4 font-['Lato']">
-                  {card.title}
-                </h4>
-                <p className="text-gray-600 text-sm lg:text-base font-['Roboto'] leading-relaxed">
-                  {card.description}
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {cards.map((item, index) => (
+          <div
+            key={index}
+            className="relative bottom-14 group bg-white text-gray-900 p-8 shadow-2xl transition-all duration-300"
+          >
+            <div className="mb-6">
+              <div className=" flex items-start justify-start text-2xl mb-4">
+                {item.icon}
               </div>
-
-              <div className="mt-auto">
-                <button className="font-bold bg-[#00CFB4] text-white px-8 py-3 hover:bg-gradient-to-br hover:from-[#00CFB4] hover:to-[#00346F] transition-all duration-300">
-                  {card.buttonText}
-                </button>
-              </div>
+              <h4 className="text-xl font-bold mb-3">
+                {item.title}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                {item.description}
+              </p>
+              <a
+                href={item.buttonLink}
+                className="inline-flex items-center gap-2 bg-[#00CFB4] group-hover:bg-gradient-to-r from-[#00CFB4] to-[#00346F] text-white px-6 py-2.5 font-bold text-xs uppercase transition-all duration-300"
+              >
+                {item.buttonText}
+              </a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       </div>
 
       {/* Expert Payment Section with Background Image */}
@@ -112,8 +119,8 @@ const ContactUsBanner = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Lato'] leading-tight mb-6">
               <span className='text-[#00CFB4]'>Expert Payment</span> is trusted by 10K+ users in <br /> the UK
             </h1>
-            <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-4xl mx-auto mb-8 font-['Roboto']">
-              Join a network of businesses relying on our secure and efficient payment solutions. From startups to established enterprises, we empower companies with cutting-edge technology and unmatched reliability
+            <p className="text-gray-600 text-base md:text-lg max-w-4xl mx-auto mb-8 font-['Roboto']">
+              Join a network of businesses relying on our secure and efficient payment solutions. From startups <br /> to established enterprises, we empower companies with cutting-edge technology and unmatched <br /> reliability
             </p>
           </div>
         </div>

@@ -67,13 +67,13 @@ const ContactUs = () => {
           {cards.map((card) => (
             <div
               key={card.id}
-              className={`relative  p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300 ${card.bgColor}
+              className={`group relative  p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300 ${card.bgColor}
                   : 'bg-white'
                 }`}
               data-aos={card.animation}
             >
               {/* Icon Section */}
-              <div className="-top-[6%] left-[40%] absolute flex justify-center mb-6">
+              <div className="group-hover:-translate-y-1.5 -top-[6%] left-[40%] absolute flex justify-center mb-6">
                 <div className={`${card.bgIcon} rounded-full`}>
                   {card.icon}
                 </div>
@@ -81,10 +81,10 @@ const ContactUs = () => {
 
               {/* Content Section */}
               <div className="text-center mb-8">
-                <h5 className={`mt-4 text-xl font-bold ${card.textColor} text-gray-900 mb-4 font-['Lato']`}>
+                <h5 className={`group-hover:-translate-y-1.5 mt-4 text-xl font-bold ${card.textColor} text-gray-900 mb-4 font-['Lato']`}>
                   {card.title}
                 </h5>
-                <p className={`${card.textColor} text-gray-600 text-sm leading-relaxed font-['Roboto'] mb-6`}>
+                <p className={`group-hover:-translate-y-1.5 ${card.textColor}  text-gray-600 text-sm leading-relaxed font-['Roboto'] mb-6`}>
                   {card.description}
                 </p>
               </div>
